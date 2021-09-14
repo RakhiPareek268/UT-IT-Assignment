@@ -7,7 +7,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 
 class UserValidatorTest extends AnyFlatSpec {
 
-  val rakhiUser: User = User("Rakhi","Kumar",22,"Google","rakhi.pareek@knoldus.in")
+  val rakhiUser: User = User("Rakhi","Pareek",22,"Google","rakhi.pareek@knoldus.in")
   val knoldusCompany: Company = Company("Knoldus", "knoldus@gmail.com", "Noida")
 
   val mockedCompanyReadDto = mock[CompanyReadDto]

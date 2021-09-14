@@ -20,7 +20,7 @@ class UserImplUnitTest extends AnyFlatSpec {
   "User" should "not be created" in {
     val userImpl = new UserImpl(mockedUserValidator)
 
-    when(mockedUserValidator.userIsValid(lokeshUser)) thenReturn(false)
+    when(mockedUserValidator.userIsValid(rakhiUser)) thenReturn(false)
     val result = userImpl.createUser(rakhiUser)
     assert(result.isEmpty)
   }

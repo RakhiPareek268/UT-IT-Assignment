@@ -16,7 +16,7 @@ class UserImplIntegrationTest extends AnyFlatSpec {
   "User" should "not be created as company does not exists in DB" in {
     val rakhiUser: User = User("Rakhi","pareek",24,"Google","rakhi.pareek@gmail.com")
 
-    val result = userImpl.createUser(rahulUser)
+    val result = userImpl.createUser(rakhiUser)
     assert(result.isEmpty)
   }
 
