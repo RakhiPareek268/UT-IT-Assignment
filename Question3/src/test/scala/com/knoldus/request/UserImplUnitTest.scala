@@ -7,13 +7,13 @@ import org.scalatest.flatspec.AnyFlatSpec
 class UserImplUnitTest extends AnyFlatSpec {
 
   val mockedUserValidator = mock[UserValidator]
-  val lokeshUser: User = User("Lokesh","Kumar",21,"knoldus","lokesh.kumar@knoldus.com")
+  val rakhiUser: User = User("Rakhi","Pareek",21,"knoldus","rakhi.pareek@knoldus.com")
 
   "User" should "be created" in {
     val userImpl = new UserImpl(mockedUserValidator)
 
-    when(mockedUserValidator.userIsValid(lokeshUser)) thenReturn(true)
-    val result = userImpl.createUser(lokeshUser)
+    when(mockedUserValidator.userIsValid(rakhiUser)) thenReturn(true)
+    val result = userImpl.createUser(rakhiUser)
     assert(!result.isEmpty)
   }
 
@@ -21,7 +21,7 @@ class UserImplUnitTest extends AnyFlatSpec {
     val userImpl = new UserImpl(mockedUserValidator)
 
     when(mockedUserValidator.userIsValid(lokeshUser)) thenReturn(false)
-    val result = userImpl.createUser(lokeshUser)
+    val result = userImpl.createUser(rakhiUser)
     assert(result.isEmpty)
   }
 
